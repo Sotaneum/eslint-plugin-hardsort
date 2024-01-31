@@ -192,7 +192,7 @@
   };
   ```
 
-- 중간에 빈 엔터가 있고 블럭 주석이 있는 경우 해당 주석을 그룹의 제목으로 취급합니다.
+- 중간에 빈 엔터가 있고 라인 주석이 있는 경우 해당 주석을 그룹의 제목으로 취급합니다.
 - `ignoreCommentGroup`옵션을 통해 비활성화 할 수 있습니다.
 
   Examples of **incorrect** code for this rule:
@@ -204,7 +204,7 @@
     context,
     subTitle: "",
 
-    /* Main UI */
+    // Main UI
     bodyTextColor,
     title,
     buttons: [
@@ -223,7 +223,7 @@
     subTitle: "",
     inlineFooter: false,
 
-    /* Main UI */
+    // Main UI
     title,
     bodyTextColor,
     buttons: [

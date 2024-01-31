@@ -112,10 +112,10 @@ ruleTester.run("object-sort", rule, {
         bodyTextColor,
         buttons: [
           {
+            // 클릭임
             // 취소 버튼?,
             text3: "Cancel",
             onClose2,
-            // 클릭임
             onClick1: () => {} /*
             이것도 클릭
             아닌가?
@@ -296,7 +296,7 @@ ruleTester.run("object-sort", rule, {
         WWWW_WWWWWWWWW: '6',
         SSSSSSS_SSSSS_SSSSSSS: '7',
 
-        /* 알파벳 */
+        // 알파벳
         AAAAAA_AAAAAAA: '8',
       };`,
       errors: 1,
@@ -309,13 +309,13 @@ ruleTester.run("object-sort", rule, {
         TTTTT_TTTT_TTTTTTTT: '4',
         SSSSSSS_SSSSS_SSSSSSS: '7',
 
-        /* 알파벳 */
+        // 알파벳
         AAAAAA_AAAAAAA: '8',
       };`,
     },
     {
       code: `const foo = {
-        /* 알파벳 */
+        // 알파벳
         AAAAAA_AAAAAAA: '8',
         A: '9',
 
@@ -329,7 +329,7 @@ ruleTester.run("object-sort", rule, {
       };`,
       errors: 1,
       output: `const foo = {
-        /* 알파벳 */
+        // 알파벳
         A: '9',
         AAAAAA_AAAAAAA: '8',
 
