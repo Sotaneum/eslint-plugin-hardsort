@@ -25,7 +25,6 @@ ruleTester.run("object-sort", rule, {
       code: `const foo = {};`,
     },
   ],
-
   invalid: [
     {
       code: `const foo = {
@@ -130,7 +129,7 @@ ruleTester.run("object-sort", rule, {
     },
     {
       code: `const foo = [{ inlineFooter: false, context, subTitle: "", title, bodyTextColor, buttons: [ { onClick: () => {}, onClose, text: "Cancel" }, { onClose, text: "Submit", onClick: () => {} } ] }, { inlineFooter: false, context, subTitle: "", title, bodyTextColor, buttons: [ { onClick: () => {}, onClose, text: "Cancel" }, { onClose, text: "Submit", onClick: () => {} } ] }];`,
-      errors: 2,
+      errors: 1,
       output: `const foo = [{ title, context, bodyTextColor, buttons: [ { text: "Cancel", onClose, onClick: () => {} }, { text: "Submit", onClose, onClick: () => {} } ], subTitle: "", inlineFooter: false }, { title, context, bodyTextColor, buttons: [ { text: "Cancel", onClose, onClick: () => {} }, { text: "Submit", onClose, onClick: () => {} } ], subTitle: "", inlineFooter: false }];`,
     },
     {
@@ -266,11 +265,6 @@ ruleTester.run("object-sort", rule, {
           }`,
     },
     {
-      options: [
-        {
-          ignoreCommentGroup: true,
-        },
-      ],
       code: `const data = {
             c: 'c',
 
@@ -286,6 +280,11 @@ ruleTester.run("object-sort", rule, {
             b: 'b',
             c: 'c',
           }`,
+      options: [
+        {
+          ignoreCommentGroup: true,
+        },
+      ],
     },
     {
       code: `const foo = {
@@ -341,6 +340,43 @@ ruleTester.run("object-sort", rule, {
         WWWW_WWWWWWWWW: '6',
         TTTTT_TTTT_TTTTTTTT: '4',
         SSSSSSS_SSSSS_SSSSSSS: '7',
+      };`,
+    },
+    {
+      code: `module.exports = {
+        meta: {
+          type: "suggestion",
+          docs: {},
+          fixable: "code",
+          schema: [
+            {
+              type: "object",
+              properties: {},
+              additionalProperties: false,
+            },
+          ],
+        },
+        create() {
+          return {};
+        },
+      };`,
+      errors: 1,
+      output: `module.exports = {
+        meta: {
+          docs: {},
+          type: "suggestion",
+          schema: [
+            {
+              type: "object",
+              properties: {},
+              additionalProperties: false,
+            },
+          ],
+          fixable: "code",
+        },
+        create() {
+          return {};
+        },
       };`,
     },
   ],
