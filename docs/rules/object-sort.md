@@ -9,7 +9,7 @@
 - key와 value에 따라 정렬을 시도합니다.
 - 우선순위
   1. 함수가 아닌 변수 > 함수인 변수
-  2. 축약 혹은 기본값이 없는 변수 > 축약이 아니거나 기본값이 있는 변수
+  2. 축약이 아니거나 기본값이 있거나 새로운 이름으로 할당 여부
   3. 길이 순서
   4. 알파벳 순서
 
@@ -94,8 +94,8 @@
     bodyTextColor,
     buttons: [
       { onClick: () => {}, onClose, text: "Cancel" },
-      { onClose, text: "Submit", onClick: () => {} }
-    ]
+      { onClose, text: "Submit", onClick: () => {} },
+    ],
   };
   ```
 
@@ -109,10 +109,10 @@
     bodyTextColor,
     buttons: [
       { text: "Cancel", onClose, onClick: () => {} },
-      { text: "Submit", onClose, onClick: () => {} }
+      { text: "Submit", onClose, onClick: () => {} },
     ],
     subTitle: "",
-    inlineFooter: false
+    inlineFooter: false,
   };
   ```
 
@@ -131,8 +131,8 @@
     title,
     buttons: [
       { onClick: () => {}, onClose, text: "Cancel" },
-      { onClose, text: "Submit", onClick: () => {} }
-    ]
+      { onClose, text: "Submit", onClick: () => {} },
+    ],
   };
   ```
 
@@ -149,8 +149,8 @@
     bodyTextColor,
     buttons: [
       { text: "Cancel", onClose, onClick: () => {} },
-      { text: "Submit", onClose, onClick: () => {} }
-    ]
+      { text: "Submit", onClose, onClick: () => {} },
+    ],
   };
   ```
 
@@ -169,8 +169,8 @@
     title,
     buttons: [
       { onClick: () => {}, onClose, text: "Cancel" },
-      { onClose, text: "Submit", onClick: () => {} }
-    ]
+      { onClose, text: "Submit", onClick: () => {} },
+    ],
   };
   ```
 
@@ -187,8 +187,8 @@
     bodyTextColor,
     buttons: [
       { text: "Cancel", onClose, onClick: () => {} },
-      { text: "Submit", onClose, onClick: () => {} }
-    ]
+      { text: "Submit", onClose, onClick: () => {} },
+    ],
   };
   ```
 
@@ -209,8 +209,8 @@
     title,
     buttons: [
       { onClick: () => {}, onClose, text: "Cancel" },
-      { onClose, text: "Submit", onClick: () => {} }
-    ]
+      { onClose, text: "Submit", onClick: () => {} },
+    ],
   };
   ```
 
@@ -228,19 +228,19 @@
     bodyTextColor,
     buttons: [
       { text: "Cancel", onClose, onClick: () => {} },
-      { text: "Submit", onClose, onClick: () => {} }
-    ]
+      { text: "Submit", onClose, onClick: () => {} },
+    ],
   };
   ```
 
 ### Options
 
-|옵션|기본값|내용|
-|--|--|--|
-|functionKeyNames|`["select", "next"]`|함수 여부를 식별하는 용도로 활용되며, 해당 배열에 포함된 key인 경우 함수로 취급합니다.|
-|functionValueTypes|`["AsyncFunction", "MethodDefinition", "GeneratorFunction", "FunctionExpression", "ArrowFunctionExpression"]`|함수 여부를 식별하는 용도로 활용되며, 해당 배열에 포함된 value의 type인 경우 함수로 취급힙니다.|
-|ignoreCommentGroup|`false`|정렬 그룹핑 방식 중, 공백 그룹을 허용할지 여부를 지정합니다.|
-|functionKeyNamePatterns|`["^on", "^callback"]`|함수 여부를 식별하는 용도로 활용되며, 해당 배열에 포함된 정규식을 key가 통과한 경우 함수로 취급합니다.|
+| 옵션                    | 기본값                                                                                                        | 내용                                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| functionKeyNames        | `["select", "next"]`                                                                                          | 함수 여부를 식별하는 용도로 활용되며, 해당 배열에 포함된 key인 경우 함수로 취급합니다.                 |
+| functionValueTypes      | `["AsyncFunction", "MethodDefinition", "GeneratorFunction", "FunctionExpression", "ArrowFunctionExpression"]` | 함수 여부를 식별하는 용도로 활용되며, 해당 배열에 포함된 value의 type인 경우 함수로 취급힙니다.        |
+| ignoreCommentGroup      | `false`                                                                                                       | 정렬 그룹핑 방식 중, 공백 그룹을 허용할지 여부를 지정합니다.                                           |
+| functionKeyNamePatterns | `["^on", "^callback"]`                                                                                        | 함수 여부를 식별하는 용도로 활용되며, 해당 배열에 포함된 정규식을 key가 통과한 경우 함수로 취급합니다. |
 
 ## When Not To Use It
 

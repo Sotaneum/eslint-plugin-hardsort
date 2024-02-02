@@ -19,9 +19,14 @@ module.exports = {
       env: { mocha: true },
       files: ["tests/**/*.js"],
     },
+    {
+      files: ["**/*.md"],
+      rules: {
+        "hardsort/object-sort": "off",
+      },
+    },
   ],
   parserOptions: {
     ecmaVersion: "latest",
   },
-  ignorePatterns: ["**/*.md", "**/*.test.js"],
 };
