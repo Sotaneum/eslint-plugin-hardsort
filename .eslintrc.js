@@ -6,7 +6,14 @@ module.exports = {
   },
   root: true,
   rules: {
-    "hardsort/object-sort": "error",
+    "hardsort/object-sort": [
+      "error",
+      {
+        functionKeyNames: ["sort", "fix"],
+        functionKeyNamePatterns: ["^(use|to|check)"],
+      },
+    ],
+    "hardsort/jsx-attr-sort": "off",
   },
   extends: [
     "eslint:recommended",
