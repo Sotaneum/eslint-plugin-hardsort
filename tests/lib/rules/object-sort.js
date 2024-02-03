@@ -362,5 +362,34 @@ ruleTester.run("object-sort", rule, {
         done: () => {},
       }`,
     },
+    {
+      code: `module.exports = {
+        sort,
+        toKey,
+        useCompare,
+        checkPunctuator,
+        useCheckFunction,
+        useReplaceByNodes,
+        useHasGroupComment,
+        compareKeys: Object.keys(compareMap),
+      };`,
+      errors: 1,
+      output: `module.exports = {
+        compareKeys: Object.keys(compareMap),
+        sort,
+        toKey,
+        useCompare,
+        checkPunctuator,
+        useCheckFunction,
+        useReplaceByNodes,
+        useHasGroupComment,
+      };`,
+      options: [
+        {
+          functionKeyNames: ["sort", "fix"],
+          functionKeyNamePatterns: ["^use", "^to", "^check"],
+        },
+      ],
+    },
   ],
 });
