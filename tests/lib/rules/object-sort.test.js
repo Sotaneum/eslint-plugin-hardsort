@@ -19,6 +19,9 @@ const ruleTester = new RuleTester({ parserOptions: { ecmaVersion: "latest" } });
 ruleTester.run("object-sort", rule, {
   valid: [
     {
+      code: `const foo = {};`,
+    },
+    {
       code: `const foo = { title, onClick };`,
     },
     {
