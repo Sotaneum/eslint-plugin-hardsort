@@ -36,24 +36,12 @@ ruleTester.run("jsx-attr-sort", rule, {
     `<Foo cry={name} cake="" charm="" climb="" capture="" />`,
     `<Foo charm="" climb="" capture="" {...props} cry={name} cake="" />`,
     `<Foo
-      capture=""
-
       charm=""
       climb=""
+      capture=""
       {...props}
       cry={name}
       cake=""
-    />`,
-    `<Foo
-      // http props
-      capture=""
-
-      // ui props
-      cake
-      charm=""
-      climb=""
-      {...props}
-      cry={name}
     />`,
     `<Foo
       // ui props
@@ -105,29 +93,28 @@ ruleTester.run("jsx-attr-sort", rule, {
     {
       code: `<Foo
       capture=""
-
       climb=""
       charm=""
       {...props}
+      onClick={handleClick}
       cake=""
       cry={name}
     />`,
       errors: 1,
       output: `<Foo
-      capture=""
-
       charm=""
       climb=""
+      capture=""
       {...props}
       cry={name}
       cake=""
+      onClick={handleClick}
     />`,
     },
     {
       code: `<Foo
       // http props
       capture=""
-
       // ui props
       charm=""
       climb=""
@@ -137,13 +124,12 @@ ruleTester.run("jsx-attr-sort", rule, {
     />`,
       errors: 1,
       output: `<Foo
-      // http props
-      capture=""
-
-      // ui props
       cake
+      // ui props
       charm=""
       climb=""
+      // http props
+      capture=""
       {...props}
       cry={name}
     />`,
@@ -161,9 +147,9 @@ ruleTester.run("jsx-attr-sort", rule, {
     />`,
       errors: 1,
       output: `<Foo
-      // ui props
       cake
       charm=""
+      // ui props
       climb=""
       // http props
       capture=""

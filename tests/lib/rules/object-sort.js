@@ -134,7 +134,7 @@ ruleTester.run("object-sort", rule, {
           UNAUTHORIZED: '401',
         }
       }`,
-      options: [{ ignoreCommentGroup: true }],
+      options: [{ ignoreEnterGroup: true }],
     },
     {
       code: `const foo = {
@@ -345,7 +345,7 @@ ruleTester.run("object-sort", rule, {
           UNAUTHORIZED: '401',
         }
       }`,
-      options: [{ ignoreCommentGroup: true }],
+      options: [{ ignoreEnterGroup: true }],
     },
     {
       code: `const foo = {
