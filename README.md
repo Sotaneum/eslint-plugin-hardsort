@@ -22,9 +22,7 @@ Add `hardsort` to the plugins section of your `.eslintrc` configuration file. Yo
 
 ```json
 {
-    "plugins": [
-        "hardsort"
-    ]
+  "plugins": ["hardsort"]
 }
 ```
 
@@ -32,9 +30,10 @@ Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "hardsort/rule-name": 2
-    }
+  "rules": {
+    "hardsort/object-sort": 2,
+    "hardsort/jsx-attr-sort": 2
+  }
 }
 ```
 
