@@ -43,9 +43,10 @@ Then configure the rules you want to use under the rules section.
 
 🔧 Automatically fixable by the [`--fix` CLI option](https://eslint.org/docs/user-guide/command-line-interface#--fix).
 
-| Name                                         | Description            | 🔧 |
-| :------------------------------------------- | :--------------------- | :- |
-| [jsx-attr-sort](docs/rules/jsx-attr-sort.md) | JSX Attributes를 정렬합니다. | 🔧 |
-| [object-sort](docs/rules/object-sort.md)     | Object를 정렬합니다.         | 🔧 |
+| Name                                             | Description            | 🔧 |
+| :----------------------------------------------- | :--------------------- | :- |
+| [import-grouping](docs/rules/import-grouping.md) | import를 그룹화하여 정리합니다.   | 🔧 |
+| [jsx-attr-sort](docs/rules/jsx-attr-sort.md)     | JSX Attributes를 정렬합니다. | 🔧 |
+| [object-sort](docs/rules/object-sort.md)         | Object를 정렬합니다.         | 🔧 |
 
 <!-- end auto-generated rules list -->

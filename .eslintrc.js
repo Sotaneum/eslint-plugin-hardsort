@@ -10,7 +10,7 @@ module.exports = {
       "error",
       {
         functionKeyNames: ["sort", "fix"],
-        functionKeyNamePatterns: ["^(use|to|check)"],
+        functionKeyNamePatterns: ["^(use|to|check|get)"],
       },
     ],
     "hardsort/jsx-attr-sort": "off",
