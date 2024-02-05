@@ -44,7 +44,7 @@ Examples of **incorrect** code for this rule:
 
 ```jsx
 // ✗ bad
-importCheckbox from "./Checkbox";
+import Checkbox from "./Checkbox";
 import Button from "@/components/Button";
 ```
 
@@ -53,7 +53,7 @@ Examples of **correct** code for this rule:
 ```jsx
 // ✓ good
 import Button from "@/components/Button";
-importCheckbox from "./Checkbox";
+import Checkbox from "./Checkbox";
 ```
 
 ### Options
