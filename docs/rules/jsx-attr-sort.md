@@ -4,7 +4,7 @@
 
 <!-- end auto-generated rule header -->
 
-해당 문서에서는 `jsx-attr-sort` 규칙의 기본 설정값을 기준으로 소개하며, `sortedOrders`를 비롯하여 다른 옵션에 대한 자세한 내용은 [여기]()를 참조하세요.
+해당 문서에서는 `jsx-attr-sort` 규칙의 기본 설정값을 기준으로 소개하며, `sortedOrders`를 비롯하여 다른 옵션에 대한 자세한 내용은 [여기](https://github.com/Sotaneum/eslint-plugin-hardsort/wiki/options)를 참조하세요.
 
 ## Rule Details
 
