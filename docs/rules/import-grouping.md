@@ -38,22 +38,22 @@ import Button from "@/components/Button";
 
 ### alias를 사용하는 것과 아닌 것
 
-같은 그룹간에 정렬도 지정할 수 있습니다. alias 사용시 위에 위치하도록 합니다.
+같은 그룹간에 정렬도 지정할 수 있습니다. alias 사용시 아래에 위치하도록 합니다.
 
 Examples of **incorrect** code for this rule:
 
 ```jsx
 // ✗ bad
+importCheckbox from "./Checkbox";
 import Button from "@/components/Button";
-import React from "react";
 ```
 
 Examples of **correct** code for this rule:
 
 ```jsx
 // ✓ good
-import React from "react";
 import Button from "@/components/Button";
+importCheckbox from "./Checkbox";
 ```
 
 ### Options
