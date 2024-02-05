@@ -1,5 +1,5 @@
 {
-  "name": "@sotaneum/eslint-plugin-hardsort",
+  "name": "eslint-plugin-hardsort",
   "version": "0.0.0",
   "description": "Sorting is attempted under limited conditions.",
   "keywords": [
